@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
       title: 'Me, a peon, says',
       theme: ThemeData.dark(),
       home: MyHomePage(title: 'Me, a peon, says'),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -67,6 +68,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () => _play("me_busy_leave_me_alone.mp3"),
                 ),
                 RaisedButton(
+                  child: Text("Me Not That Kind Of Orc"),
+                  onPressed: () => _play("me_not_that_kind_of_orc.mp3"),
+                ),
+                RaisedButton(
                   child: Text("No time for play"),
                   onPressed: () => _play("no_time_for_play.mp3"),
                 ),
@@ -75,10 +80,6 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              RaisedButton(
-                child: Text("Me Not That Kind Of Orc"),
-                onPressed: () => _play("me_not_that_kind_of_orc.mp3"),
-              ),
               RaisedButton(
                 child: Text("Okay"),
                 onPressed: () => _play("okay.mp3"),
